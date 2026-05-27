@@ -1,4 +1,4 @@
-[link to sit](https://tenzentzu.github.io/ai-se_project_flashcards/#home)
+[link to site](https://tenzentzu.github.io/ai-se_project_flashcards/#home)
 
 # Flashcard App
 
