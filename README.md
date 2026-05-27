@@ -1,3 +1,5 @@
+[link to sit](https://tenzentzu.github.io/ai-se_project_flashcards/#home)
+
 # Flashcard App
 
 My first project in TripleTen's AI-Assisted Software
