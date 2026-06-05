@@ -16,8 +16,7 @@
     <title>Sprint 1 Project</title>
 
     <link rel="icon" sizes="100x100" href="favicon.ico" />
-    <link rel="stylesheet" href="./assets/vendor/normalize.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,19 +35,17 @@
         <ul class="nav__links">
           <li><a class="nav__link" href="#home">My Decks</a></li>
           <li><a class="nav__link" href="#not-found">About</a></li>
-          <li>
-            <a class="nav__link" href="#carousel">Carousel</a>
-          </li>
+          <!-- Carousel removed from nav; accessible via Practice button in deck view -->
         </ul>
       </nav>
     </header>
 
     <main class="page__main-content">
-      <section id="home" class="decks">
-        <h2 class="decks__title">My Decks</h2>
+      <section id="home" class="gallery">
+        <h2 class="gallery__title">My Decks</h2>
         <div class="wrapping-row">
-          <ul class="decks__list wrapping-row__display-contents"></ul>
-          <button type="button" class="deck decks__new-deck-btn">
+          <ul class="gallery__list wrapping-row__display-contents"></ul>
+          <button type="button" class="card gallery__new-deck-btn">
             + New Deck
           </button>
         </div>
@@ -84,6 +81,22 @@
         ></button>
       </section>
 
+      <section id="deck-view" class="deck-view">
+        <div class="deck-view__header">
+          <h2 class="deck-view__title"></h2>
+          <button
+            class="deck-view__practice-btn"
+            type="button"
+            aria-label="Practice this deck"
+          >
+            Practice
+          </button>
+        </div>
+        <div class="wrapping-row">
+          <ul class="deck-view__cards wrapping-row__display-contents"></ul>
+        </div>
+      </section>
+
       <!--Forgot what this section is for. Dont have an about page. Is it supposed to lead to this instead? 
       Dont think this is supposed to be visible at all times. IDK. Figure out later.-->
       <section id="not-found" class="not-found">
@@ -93,13 +106,13 @@
     </main>
 
     <template id="deck">
-      <li class="deck deck_color_green">
-        <a class="deck__link" href="#"></a>
-        <h3 class="deck__title"></h3>
-        <div class="deck__row">
-          <p class="deck__count"></p>
+      <li class="card card_color_green">
+        <a class="card__link" href="#"></a>
+        <h3 class="card__title"></h3>
+        <div class="card__row">
+          <p class="card__count"></p>
           <button
-            class="deck__delete-btn"
+            class="card__delete-btn"
             aria-label="Delete this deck"
             type="button"
           ></button>
@@ -107,6 +120,23 @@
       </li>
     </template>
 
+    <template id="card-template">
+      <li class="deck-view__item">
+        <div class="deck-view__card">
+          <p class="deck-view__card-text"></p>
+          <button
+            class="deck-view__flip-btn carousel__btn carousel__btn_type_flip"
+            type="button"
+            aria-label="flip card to other side"
+          ></button>
+          <button
+            class="deck-view__delete-btn card__delete-btn"
+            type="button"
+            aria-label="delete this card"
+          ></button>
+        </div>
+      </li>
+    </template>
     <footer class="footer">
       <p class="footer__text">&copy; 2026 Miles English</p>
     </footer>

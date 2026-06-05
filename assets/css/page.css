@@ -68,7 +68,7 @@
   text-decoration: underline;
 }
 
-.deck {
+.card {
   box-sizing: border-box;
   width: 100%;
   max-width: 325px;
@@ -79,33 +79,38 @@
   border-radius: 20px;
   justify-content: space-between;
   list-style-type: none;
-  margin: 40px 0 0 0;
   position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-.deck__title {
+.card__title {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.2;
 }
 
-.deck__count {
+.card__count {
   padding: 0;
   margin: 0 0 20px 0;
 }
 
-.deck__link {
+.card__link {
   position: absolute;
   inset: 0;
   z-index: 1;
 }
 
-.decks__title {
+.gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery__title {
   font-weight: 700;
   font-size: 40px;
   padding: 0;
-  margin: 60px 0 0 0;
+  margin: 60px 0 40px 0;
 }
 
 .decks {
@@ -115,7 +120,7 @@
   margin: 0;
 }
 
-.decks__list {
+.gallery__list {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -124,14 +129,14 @@
   padding: 0;
 }
 
-.deck__row {
+.card__row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.deck__delete-btn {
+.card__delete-btn {
   background-image: url("../images/delete.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -145,19 +150,19 @@
   z-index: 2;
 }
 
-.deck__delete-btn:hover {
+.card__delete-btn:hover {
   opacity: 100%;
 }
 
-.deck_color_green {
+.card_color_green {
   background-color: #64d583;
 }
 
-.deck_color_blue {
+.card_color_blue {
   background-color: #91a8f9;
 }
 
-.deck_color_pink {
+.card_color_pink {
   background-color: #ee92d7;
   position: relative;
 }
@@ -168,19 +173,19 @@ maybe it was on the carousel.html file that i deleted. */
   margin: 70px 0 0 0;
 }
 
-.deck_color_purple {
+.card_color_purple {
   background-color: #aa8ef0;
 }
 
-.deck_color_orange {
+.card_color_orange {
   background-color: #ee955e;
 }
 
-.deck_color_yellow {
+.card_color_yellow {
   background-color: #f5d770;
 }
 
-.decks__new-deck-btn {
+.gallery__new-deck-btn {
   background-color: #d9d9d9;
   font-weight: 700;
   font-size: 24px;
@@ -190,6 +195,28 @@ maybe it was on the carousel.html file that i deleted. */
   border: transparent;
   display: flex;
   flex-direction: row;
+}
+
+.gallery__new-card-btn {
+  background-color: #d9d9d9;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #1a1a1a80;
+  opacity: 50%;
+  border: transparent;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 325px;
+  height: 205px;
+  border-radius: 20px;
+}
+
+.gallery__new-card-btn:hover {
+  background-color: #c5c5c5;
+  color: #1a1a1a;
+  cursor: pointer;
 }
 
 .wrapping-row {
@@ -202,7 +229,7 @@ maybe it was on the carousel.html file that i deleted. */
   display: contents;
 }
 
-.decks__new-deck-btn:hover {
+.gallery__new-deck-btn:hover {
   background-color: #c5c5c5;
   color: #1a1a1a;
   cursor: pointer;
@@ -230,147 +257,4 @@ maybe it was on the carousel.html file that i deleted. */
   justify-content: center;
   align-items: center;
   padding-top: 100px;
-}
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 106px;
-}
-
-.carousel__row {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.carousel__card {
-  width: 440px;
-  height: 300px;
-  background-color: #64d583;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  padding: 20px;
-}
-
-.carousel__card-text {
-  font-weight: 700;
-  font-size: 32px;
-}
-
-.carousel__title {
-  font-weight: 500;
-  font-size: 14px;
-  color: #1a1a1a80;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0 0 32px 0;
-}
-
-.carousel__btn {
-  background-color: #fff;
-  opacity: 50%;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  border: 0px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.carousel__btn_type_left::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../images/left.svg);
-}
-
-.carousel__btn_type_right::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/right.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.carousel__btn_type_right {
-  right: 400px;
-}
-
-.carousel__btn_type_flip::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/flip.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.carousel__btn_type_flip {
-  margin-top: 15px;
-}
-
-.carousel__btn_type_left:hover::before {
-  opacity: 100%;
-}
-
-.carousel__btn_type_right:hover {
-  opacity: 100%;
-}
-
-.carousel__btn_type_flip:hover {
-  opacity: 100%;
-}
-
-.carousel__btn_disabled {
-  cursor: default;
-}
-
-.carousel__btn_disabled::before {
-  opacity: 20%;
-}
-
-.carousel__btn_disabled:hover::before {
-  opacity: 20%;
-  cursor: default;
-}
-
-.carousel__card_color_green {
-  background-color: #64d583;
-}
-
-.carousel__card_color_blue {
-  background-color: #91a8f9;
-}
-
-.carousel__card_color_pink {
-  background-color: #ee92d7;
-}
-
-.carousel__card_color_purple {
-  background-color: #aa8ef0;
-}
-
-.carousel__card_color_orange {
-  background-color: #ee955e;
-}
-
-.carousel__card_color_yellow {
-  background-color: #f5d770;
-}
-
-.carousel__card_color_white {
-  background-color: #fff;
 }
