@@ -78,7 +78,7 @@ export function renderDeckView(deck) {
   if (deckViewCardsEl) {
     const newCardBtn = document.createElement("button");
     newCardBtn.type = "button";
-    newCardBtn.className = "gallery__new-card-btn card";
+    newCardBtn.className = "deck-view__new-card-btn card";
     newCardBtn.textContent = "+ New Card";
     deckViewCardsEl.append(newCardBtn);
   }

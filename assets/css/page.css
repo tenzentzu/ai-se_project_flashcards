@@ -197,28 +197,6 @@ maybe it was on the carousel.html file that i deleted. */
   flex-direction: row;
 }
 
-.gallery__new-card-btn {
-  background-color: #d9d9d9;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  color: #1a1a1a80;
-  opacity: 50%;
-  border: transparent;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 325px;
-  height: 205px;
-  border-radius: 20px;
-}
-
-.gallery__new-card-btn:hover {
-  background-color: #c5c5c5;
-  color: #1a1a1a;
-  cursor: pointer;
-}
-
 .wrapping-row {
   display: flex;
   flex-wrap: wrap;
