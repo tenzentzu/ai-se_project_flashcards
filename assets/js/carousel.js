@@ -85,17 +85,3 @@ function enableButton(buttonEl) {
   buttonEl.removeAttribute("disabled");
 }
 export { renderCarouselView };
-
-/* copilot made. might use.
-function cardAnswer(deck, currentIndex) {
-  return deck.cards[currentIndex]?.answer || "";
-} */
-
-/* Quick question with some context for whoever reviews this:
-  I used the copilot ai to help when i was stumped on certain parts, like the part 6 of task 6 updateDisplay() function and the updateArrows() stuff.
-  Writing the functions wasn't dificult, but understanding where they needed to be called was something I had trouble understanding. Like i had it to where
-  I'd have to refresh the page to show the question again after flipping to the answer and its kinda obvious to call it there. I dont really understand
-  this one thing. 
-
-  My question is: Is there a sure fire way to know where you need to call a function like that? Because what i was doing before was calling it 
-  only at the end of the code, just before the disableButton() functions. */

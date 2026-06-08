@@ -2,6 +2,18 @@
   .page {
     padding: 22px 20px 0 20px;
   }
+  .page::after {
+    content: " ";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    right: 0;
+    height: 156px;
+    background: linear-gradient(to bottom, transparent, #ececec);
+    z-index: 1;
+    pointer-events: none;
+  }
+
   .header__title {
     font-size: 20px;
   }
@@ -15,6 +27,7 @@
   .card {
     max-width: 353px;
     width: 100%;
+    aspect-ratio: 16 / 9;
   }
   .gallery__new-deck-btn {
     position: fixed;
@@ -34,6 +47,7 @@
     opacity: 100%;
     padding: 14px 0 14px 0;
     margin: 0 auto;
+    z-index: 2;
   }
 
   .deck-view {
@@ -57,6 +71,7 @@
     grid-template-columns: 1fr;
     gap: 16px;
     justify-items: center;
+    max-width: 353px;
     width: 100%;
   }
 
@@ -79,6 +94,15 @@
     left: 0;
     right: 0;
     bottom: 75px;
+    z-index: 2;
+  }
+  .deck-view__practice-btn::before {
+    background: linear-gradient(
+      180deg,
+      #ececec00 0%,
+      #ececec 10%,
+      #ececec 100%
+    );
   }
   .deck-view__new-card-btn {
     width: 100%;
@@ -92,6 +116,10 @@
     font-size: 18px;
     border-radius: 8px;
     position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 135px;
+    z-index: 2;
   }
 
   .footer {
@@ -99,7 +127,39 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ececec;
     padding: 36px 0 20px 20px;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .footer::before {
+    max-height: 156px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #ececec00 0%, #ececec 50%, #ececec 35%);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .carousel__card {
+    max-width: 353px;
+    width: 353px;
+    max-height: 420px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+  }
+  .carousel__btn_type_left {
+    position: absolute;
+    left: 20px;
+    bottom: 256px;
+  }
+  .carousel__btn_type_right {
+    position: absolute;
+    right: 20px;
+    bottom: 256px;
   }
 }
