@@ -93,12 +93,19 @@
           </button>
         </div>
         <div class="wrapping-row">
-          <ul class="card deck-view__cards wrapping-row__display-contents"></ul>
+          <ul class="card deck-view__cards">
+            <li class="deck-view__item deck-view__new-card-item">
+              <button
+                class="deck-view__new-card-btn card"
+                type="button"
+                aria-label="Add a new card"
+              >
+                + New Card
+              </button>
+            </li>
+          </ul>
         </div>
       </section>
-
-      <!--Forgot what this section is for. Dont have an about page. Is it supposed to lead to this instead? 
-      Dont think this is supposed to be visible at all times. IDK. Figure out later.-->
       <section id="not-found" class="not-found">
         <h2 class="not-found__status-code">404</h2>
         <p class="not-found__text">Sorry, nothing found!</p>

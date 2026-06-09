@@ -7,8 +7,13 @@ const deckViewPracticeBtn = document.querySelector(".deck-view__practice-btn");
 const deckCardTemplate = document.querySelector("#card-template");
 
 function clearDeckView() {
-  if (deckViewCardsEl) {
-    deckViewCardsEl.innerHTML = "";
+  if (!deckViewCardsEl) return;
+  const preservedItem = deckViewCardsEl.querySelector(
+    ".deck-view__new-card-item",
+  );
+  deckViewCardsEl.innerHTML = "";
+  if (preservedItem) {
+    deckViewCardsEl.append(preservedItem);
   }
 }
 
@@ -67,21 +72,18 @@ export function renderDeckView(deck) {
 
   assignPracticeButton(deck);
 
+  const newCardItem = deckViewCardsEl?.querySelector(
+    ".deck-view__new-card-item",
+  );
   deck.cards.forEach((card) => {
     const cardEl = createDeckCardEl(card, deck);
-    if (deckViewCardsEl) {
+    if (!deckViewCardsEl) return;
+    if (newCardItem) {
+      deckViewCardsEl.insertBefore(cardEl, newCardItem);
+    } else {
       deckViewCardsEl.append(cardEl);
     }
   });
-
-  // Add new card button at the end
-  if (deckViewCardsEl) {
-    const newCardBtn = document.createElement("button");
-    newCardBtn.type = "button";
-    newCardBtn.className = "deck-view__new-card-btn card";
-    newCardBtn.textContent = "+ New Card";
-    deckViewCardsEl.append(newCardBtn);
-  }
 }
 
 export function renderDeckViewSection(
