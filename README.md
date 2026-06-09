@@ -1,5 +1,8 @@
 [link to site](https://tenzentzu.github.io/ai-se_project_flashcards/#home)
 
+Check out [this video](https://drive.google.com/file/d/1SqC-Fz1rCmqkUskUoAd5LfCf8s52P7tV/view?usp=drive_link), where I describe my
+project and some challenges I faced while building it.
+
 # Flashcard App
 
 My first project in TripleTen's AI-Assisted Software
