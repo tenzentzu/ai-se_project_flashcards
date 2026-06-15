@@ -167,8 +167,6 @@
   position: relative;
 }
 
-/* no idea what this was for. maybe figure out later. maybe just delete. there's no id in my html for it.
-maybe it was on the carousel.html file that i deleted. */
 #adt-alignment {
   margin: 70px 0 0 0;
 }

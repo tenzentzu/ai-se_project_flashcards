@@ -53,7 +53,7 @@
 
       <section
         id="carousel"
-        class="carousel page__main-content_location_carousel"
+        class="carousel page__main-content_location_carousel page_no-mobile-bar"
       >
         <h2 class="carousel__title">HTML Tags Deck &middot; 1/10</h2>
         <div class="carousel__row">
@@ -65,9 +65,7 @@
           ></button>
           <div class="carousel__card">
             <p class="carousel__card-text"></p>
-            <!--
-            <p class="carousel__card-text">&lt;body&gt;&lt;/body&gt;</p>
-          --></div>
+          </div>
           <button
             class="carousel__btn carousel__btn_type_right"
             type="button"
@@ -94,7 +92,7 @@
         </div>
         <div class="wrapping-row">
           <ul class="card deck-view__cards">
-            <li class="deck-view__item deck-view__new-card-item">
+            <li class="deck-view__item deck-view__new-card-item wrapping-row">
               <button
                 class="deck-view__new-card-btn deck-view__new-card-btn_location card"
                 type="button"
@@ -106,7 +104,7 @@
           </ul>
         </div>
       </section>
-      <section id="not-found" class="not-found">
+      <section id="not-found" class="not-found page_no-mobile-bar">
         <h2 class="not-found__status-code">404</h2>
         <p class="not-found__text">Sorry, nothing found!</p>
       </section>
@@ -128,7 +126,7 @@
     </template>
 
     <template id="card-template">
-      <li class="deck-view__item">
+      <li class="deck-view__item wrapping-row">
         <div class="deck-view__card">
           <p class="deck-view__card-text"></p>
           <button
