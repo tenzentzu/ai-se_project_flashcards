@@ -135,11 +135,8 @@ function router() {
 
 decks.forEach(renderDeckEl);
 
-// Initialize practice button event listener
 initDeckViewPracticeButton();
 
-// calls router on the initial page load
 router();
 
-// listener for hash changes
 window.addEventListener("hashchange", router);
