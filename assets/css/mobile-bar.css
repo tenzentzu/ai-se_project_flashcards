@@ -97,7 +97,7 @@
     width: 100%;
     max-width: 170px;
     max-height: 44px;
-    height: 100%;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,9 +108,14 @@
     box-sizing: border-box;
   }
 
-  .deck-view__practice-btn {
+  .deck-view__practice-btn_location {
+    right: calc(50% + 6px);
+  }
+
+  .deck-view__new-card-btn_location {
     left: calc(50% + 6px);
   }
+
   .deck-view__practice-btn::before {
     background: linear-gradient(
       180deg,
@@ -154,6 +159,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .carousel__row {
+    position: relative;
+  }
   .carousel__card {
     max-width: 353px;
     width: 100%;
@@ -171,16 +179,18 @@
       0px 2px 8px 0px #0000001a,
       -1px 2px 2px 0px #ffffffb2 inset,
       1px -1px 2px 0px #00000040 inset;
-    z-index: 2;
+  }
+  .carousel__btn {
+    gap: 12px;
   }
   .carousel__btn_type_left {
     position: absolute;
-    left: 20px;
-    bottom: 256px;
+    left: 0;
+    top: 315px;
   }
   .carousel__btn_type_right {
     position: absolute;
-    right: 20px;
-    bottom: 256px;
+    right: 0;
+    top: 315px;
   }
 }
