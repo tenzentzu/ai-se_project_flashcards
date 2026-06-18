@@ -194,3 +194,15 @@
     top: 315px;
   }
 }
+
+@media screen and (max-width: 393px) {
+  .form__submit-btn {
+    min-width: 353px;
+    width: 100%;
+  }
+  .card-array-text {
+    min-width: 353px;
+    width: 100%;
+    min-height: 432px;
+  }
+}
