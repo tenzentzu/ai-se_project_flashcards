@@ -6,6 +6,7 @@ import {
   renderDeckViewSection,
   initDeckViewPracticeButton,
 } from "./deck-view.js";
+import { disableSubmitBtn } from "./new-deck-view.js";
 
 const homeSection = document.querySelector("#home");
 const carouselSection = document.querySelector("#carousel");
@@ -130,6 +131,7 @@ function router() {
     }
   } else if (hash === "new-deck-view") {
     renderNewDeckView();
+    disableSubmitBtn();
   } else if (hash.startsWith("deck/")) {
     const deckId = hash.split("/")[1];
     const deck = getDeckByID(deckId);
