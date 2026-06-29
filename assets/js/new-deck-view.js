@@ -1,7 +1,9 @@
+import { decks } from "./decks.js";
+
 const HEX_DIGITS = /^[0-9a-fA-F]{6}$/;
 const formEl = document.querySelector("#new-deck-form");
 const submitBtn = formEl.querySelector(".form__submit-btn");
-const textArea = formEl.querySelector(".card-array-text");
+const textArea = formEl.querySelector("#card-array");
 /**
  * Converts a string to a URL-safe slug: lowercase with any run of
  * non-alphanumeric characters replaced by a single hyphen, and no leading or
@@ -37,8 +39,27 @@ function disableSubmitBtn() {
   submitBtn.disabled = false;
 }
 
-formEl.addEventListener("submit", () => {
+formEl.addEventListener("submit", (e) => {
   e.preventDefault();
-});
+  const data = new FormData(e.target);
+  const newDeckData = Object.fromEntries(data);
 
+  const jsonData = JSON.parse(textArea.value);
+
+  const deckColor = normalizeColor(newDeckData.color);
+
+  const deckSlug = `${slugify(jsonData.name)}-${Date.now()}`;
+
+  const deck = {
+    id: deckSlug,
+    color: deckColor,
+    cards: jsonData.cards,
+    name: jsonData.name,
+  };
+
+  decks.push(deck);
+  document.querySelector("#new-deck-view").style.display = "none";
+  window.location.hash = `deck/${deckSlug}`;
+  console.log("form submitted");
+});
 export { disableSubmitBtn };
